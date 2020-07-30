@@ -30,6 +30,27 @@ class Linkedlist:
             prev = temp
             temp = temp.next
 
+    def insertafter(self, prev, new):
+        new_node = Node(new)
+        new_node.next = prev.next
+        prev.next = new_node
+
+    def appends(self, new):
+        new_node = Node(new)
+        if self.head is None:
+            self.head = new_node
+            return
+
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+
+    def insert_at_front(self, new):
+        new_node = Node(new)
+        new_node.next = self.head
+        self.head = new_node
+
 
 
 list1 = Linkedlist()
