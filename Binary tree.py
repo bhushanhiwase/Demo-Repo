@@ -32,6 +32,15 @@ class Node:
         if self.right:
             self.right.printtree()
             
+            
+    def print_descending(self):
+        if self.right:
+            self.right.print_descending()
+        print(self.data, end= ",")
+
+        if self.left:
+            self.left.print_descending()
+            
 
     def searchitem(self, val):
 
