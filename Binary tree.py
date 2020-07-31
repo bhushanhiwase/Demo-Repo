@@ -25,12 +25,29 @@ class Node:
             self.data = data
 
     def printtree(self):                        # use recursion to print the tree
+        
         if self.left:                           # we first print all the left elements and then the right
             self.left.printtree()               # Recursion uses call stack
         print(self.data)                        # This prints the node data even if there is only single node
         if self.right:
             self.right.printtree()
+            
 
+    def searchitem(self, val):
+
+        if val < self.data:
+            if self.left is None:
+                print("not exist")
+                return
+            return self.left.searchitem(val)
+        elif val > self.data:
+            if self.right is None:
+                print("not exist")
+                return
+            return self.right.searchitem(val)
+        else:
+            print("Value exist")
+            return
 
 
 a = Node(4)
