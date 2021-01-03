@@ -53,8 +53,8 @@ class Linkedlist:
 
 
 
-list1 = Linkedlist()
-list1.head = Node(100)
+list1 = Linkedlist()                # We instantiate the class object here
+list1.head = Node(100)              # We instantiate the head object Node class
 second_element = Node(200)
 third_element =  Node(300)
 fourth_element = Node(400)
