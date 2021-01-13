@@ -29,6 +29,16 @@ class Linkedlist:
 
             prev = temp
             temp = temp.next
+           
+    def reverse(self):
+        current = self.head
+        prev = None
+        while current is not None:
+            nextt = current.next
+            current.next = prev
+            prev = current
+            current = nextt
+        self.head = prev
 
     def insertafter(self, prev, new):
         new_node = Node(new)
