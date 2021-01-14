@@ -41,6 +41,18 @@ class Node:
         if self.left:
             self.left.print_descending()
             
+    def maxDepth(node):
+        if node is None:
+            return 0
+        else:
+            lDepth = maxDepth(self.left) 
+            rDepth = maxDepth(self.right)
+
+            if rDepth > lDepth:
+                return rDepth+1
+            else:
+                return lDepth+1
+            
 
     def searchitem(self, val):
 
