@@ -16,7 +16,7 @@ def binary(lst, target):
         else:
             end = mid - 1
 
-        if start >= end:
+        if start > end:
             return False
 
 
