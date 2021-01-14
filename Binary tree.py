@@ -45,11 +45,11 @@ class Node:
         if node is None:
             return 0
         else:
-            lDepth = maxDepth(self.left) 
+            lDepth = maxDepth(self.left)         # it will create a call stack and based on the number of iteration before hitting None, we get the parameter added with 1
             rDepth = maxDepth(self.right)
 
             if rDepth > lDepth:
-                return rDepth+1
+                return rDepth+1                  # This addition is returned for each call stack and then maximumdepth is returned at the last.       
             else:
                 return lDepth+1
             
